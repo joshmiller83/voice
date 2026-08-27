@@ -1,0 +1,132 @@
+<!doctype html>
+<!--
+  Source for img/og.png — the social card. Rendered by tools/make-images.sh
+  with headless Chrome. Edit here, re-run that script, commit the PNG.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-latin.woff2") format("woff2");
+    font-weight: 400 800;
+    font-stretch: 62% 125%;
+  }
+  @font-face {
+    font-family: "Literata";
+    src: url("../fonts/literata-latin.woff2") format("woff2");
+    font-weight: 400 700;
+  }
+
+  * { box-sizing: border-box; margin: 0; }
+
+  body {
+    width: 1200px;
+    height: 630px;
+    background: #1b2027;
+    color: #ede6da;
+    font-family: "Literata", Georgia, serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 86px;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-family: "Archivo";
+    font-variation-settings: "wdth" 112, "wght" 700;
+    font-size: 118px;
+    line-height: 0.9;
+    letter-spacing: -0.028em;
+  }
+
+  p {
+    font-size: 34px;
+    line-height: 1.4;
+    color: #9aa5b1;
+    margin-top: 26px;
+    max-width: 24ch;
+  }
+
+  .transport {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 62px;
+    padding: 26px 32px;
+    background: #232a33;
+    border: 1px solid #39424e;
+    border-radius: 16px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  }
+
+  .key {
+    width: 92px;
+    height: 92px;
+    flex: none;
+    border-radius: 50%;
+    background: #2a323c;
+    border: 1px solid #39424e;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.13), 0 3px 0 -1px #171c22;
+    display: grid;
+    place-items: center;
+  }
+
+  .key svg { width: 38px; height: 38px; fill: #e8a33d; margin-left: 5px; }
+
+  .rule { width: 1px; align-self: stretch; background: rgba(237, 230, 218, 0.11); }
+
+  .wave { flex: 1; height: 62px; display: flex; align-items: center; gap: 5px; }
+  .wave i { display: block; width: 4px; border-radius: 0; background: #55616e; }
+  .wave i.on { background: #e8a33d; }
+
+  .foot {
+    position: absolute;
+    left: 86px;
+    bottom: 44px;
+    font-family: "Archivo";
+    font-variation-settings: "wdth" 100, "wght" 500;
+    font-size: 21px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #9aa5b1;
+  }
+</style>
+</head>
+<body>
+  <h1>Josh&nbsp;Miller</h1>
+  <p>Audiobook narrator — nonfiction, business, and technology</p>
+
+  <div class="transport">
+    <div class="key">
+      <svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>
+    </div>
+    <div class="rule"></div>
+    <div class="wave" id="wave"></div>
+  </div>
+
+  <div class="foot">voice.joshnliz.com</div>
+
+<script>
+  // A fixed, seeded shape — decorative here, not a claim about a real file.
+  // The site itself only ever shows waveforms rendered from actual audio.
+  var seed = 20260827;
+  function rnd() {
+    seed = (seed * 1103515245 + 12345) & 0x7fffffff;
+    return seed / 0x7fffffff;
+  }
+  var wave = document.getElementById('wave');
+  var total = 78, lit = 29;
+  for (var i = 0; i < total; i++) {
+    var bar = document.createElement('i');
+    var swell = Math.sin((i / total) * Math.PI * 3.1) * 0.3 + 0.55;
+    var h = Math.max(6, (swell + (rnd() - 0.5) * 0.55) * 62);
+    bar.style.height = Math.min(62, h).toFixed(1) + 'px';
+    if (i < lit) bar.className = 'on';
+    wave.appendChild(bar);
+  }
+</script>
+</body>
+</html>

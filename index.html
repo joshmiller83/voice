@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Josh Miller — Audiobook Narrator</title>
+<meta name="description" content="Audiobook narrator for nonfiction, business, and technology titles. Home studio in Indiana. Listen to a sample and request an audition.">
+<link rel="canonical" href="https://voice.joshnliz.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://voice.joshnliz.com/">
+<meta property="og:title" content="Josh Miller — Audiobook Narrator">
+<meta property="og:description" content="Nonfiction, business, and technology titles. Home studio in Indiana.">
+<meta property="og:image" content="https://voice.joshnliz.com/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta name="theme-color" content="#1B2027">
+
+<link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/literata-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<main>
+
+  <!-- ── Hero ─────────────────────────────────────────────────────────── -->
+  <section class="hero" aria-labelledby="name">
+    <div class="wrap">
+      <h1 id="name">Josh&nbsp;Miller</h1>
+      <p class="tagline">Audiobook narrator — nonfiction, business, and technology</p>
+
+      <!--
+        The hero player. Its resting markup below is the "no samples yet" state,
+        which is what a visitor sees before JavaScript runs and what search
+        engines index. When audio/samples.json has entries, js/player.js
+        replaces the contents of .transport with a working transport.
+        To change the resting copy, edit the two lines marked RESTING COPY.
+      -->
+      <div class="transport" id="hero" data-hero>
+        <button class="key" type="button" disabled aria-label="No sample loaded">
+          <svg class="key-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M8 5.5v13l11-6.5z"/>
+          </svg>
+        </button>
+        <div class="rule" aria-hidden="true"></div>
+        <div class="meter meter--dormant" aria-hidden="true"></div>
+        <div class="stage">
+          <!-- RESTING COPY -->
+          <p class="stage-title">Samples coming soon</p>
+          <p class="stage-note">Auditions available on request.</p>
+        </div>
+        <p class="readout" aria-hidden="true"><span>—:—</span></p>
+      </div>
+
+      <noscript>
+        <p class="noscript-note">
+          Playing audio here needs JavaScript. Email me at
+          <a href="mailto:josh@joshnliz.com">josh@joshnliz.com</a> and I'll send
+          samples directly.
+        </p>
+      </noscript>
+    </div>
+  </section>
+
+  <!-- ── Samples ──────────────────────────────────────────────────────── -->
+  <!-- Populated from audio/samples.json. Stays hidden while there are none. -->
+  <section class="band" id="samples" aria-labelledby="samples-label" hidden>
+    <div class="wrap">
+      <h2 class="label" id="samples-label">Samples</h2>
+      <ol class="tracks" data-tracks></ol>
+    </div>
+  </section>
+
+  <!-- ── About ────────────────────────────────────────────────────────── -->
+  <section class="band" id="about" aria-labelledby="about-label">
+    <div class="wrap band-split">
+      <h2 class="label" id="about-label">About</h2>
+      <div class="about">
+      <div class="prose">
+        <p>
+          I've spent twenty years in web development, and most of that time was
+          spent explaining complicated things in plain language — to clients, to
+          teams, and from conference stages. Narration is a natural extension of
+          that. My voice is male, mid-forties, with an educated central-Indiana
+          accent — the neutral American sound newscasters practice. People have
+          told me for years I should be on the radio. I finally listened.
+        </p>
+        <p>
+          I'm drawn to nonfiction, business, and technology titles, where my
+          background lets me read with real understanding rather than just
+          pronouncing the words. When the material calls for it, I can bring
+          energy and excitement to a read. Listening to audiobooks is one of my
+          favorite pastimes, so I come at this with a clear sense of what makes
+          a read work.
+        </p>
+        <p>
+          I record from a home studio in Indiana, I hit deadlines, and I
+          communicate clearly throughout a project.
+        </p>
+      </div>
+
+      <!--
+        PORTRAIT — off by default; the page is designed to be complete without
+        it. Delete these two comment markers to show it. The layout picks up
+        the second column on its own.
+      <figure class="portrait">
+        <img src="img/portrait.jpg" width="800" height="1000" alt="Josh Miller" loading="lazy" decoding="async">
+      </figure>
+      -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Credits ──────────────────────────────────────────────────────── -->
+  <section class="band" id="credits" aria-labelledby="credits-label">
+    <div class="wrap band-split">
+      <h2 class="label" id="credits-label">Credits</h2>
+      <div class="ledger">
+
+        <div class="row">
+          <h3 class="row-key">Audiobooks</h3>
+          <div class="row-val">
+            <p>Seeking my first titles — auditions welcome.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <h3 class="row-key">Speaking<span class="row-key-cont"> and voice</span></h3>
+          <div class="row-val">
+            <ul class="plain">
+              <li>
+                Main-stage speaker, DrupalCon Chicago 2026
+              </li>
+              <li>
+                Co-led conference summit session, DrupalCon Chicago 2026
+              </li>
+              <li>
+                20 years of client presentations, trainings, and recorded
+                technical walkthroughs
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ──────────────────────────────────────────────────────── -->
+  <section class="band band--last" id="contact" aria-labelledby="contact-label">
+    <div class="wrap band-split">
+      <h2 class="label" id="contact-label">Contact</h2>
+      <div class="prose">
+        <p class="mail">
+          <a href="mailto:josh@joshnliz.com">josh@joshnliz.com</a>
+        </p>
+        <p class="acx">
+          <a href="https://www.acx.com/narrator?p=AXAS5FM89WMIQ">Find me on ACX to request an audition.</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Josh Miller · Audiobook narration · Indiana</p>
+  </div>
+</footer>
+
+<script src="js/player.js" defer></script>
+</body>
+</html>
