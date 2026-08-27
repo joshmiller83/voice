@@ -383,6 +383,12 @@ h1 {
 
 .portrait { margin: 0; max-width: 14rem; }
 
+/* Stacked, the portrait would land three paragraphs down, which is too late
+   for a face to do its job. Lead with it, at byline scale. */
+@media (max-width: 61.999rem) {
+  .portrait { order: -1; max-width: 10rem; }
+}
+
 .portrait img {
   display: block;
   width: 100%;
