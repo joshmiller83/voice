@@ -161,7 +161,7 @@ h1 {
 
 .transport > .key { grid-area: key; }
 .transport > .stage { grid-area: stage; }
-.transport > .meter { grid-area: wave; margin-bottom: 0; }
+.transport > .meter { grid-area: wave; }
 .transport > .readout { grid-area: time; justify-self: end; }
 
 /* The milled divider between the key and the stage. It only earns its place
@@ -193,7 +193,6 @@ h1 {
   --size: clamp(3.75rem, 11vw, 5.5rem);
   inline-size: var(--size);
   block-size: var(--size);
-  flex: none;
   display: grid;
   place-items: center;
   padding: 0;
@@ -261,7 +260,6 @@ h1 {
 .meter {
   position: relative;
   block-size: clamp(2.75rem, 8vw, 4rem);
-  margin-bottom: 0.6rem;
   touch-action: none;
 }
 
@@ -420,7 +418,7 @@ h1 {
 
 .track > .key { grid-area: key; --size: 2.75rem; }
 .track > .track-head { grid-area: head; min-width: 0; }
-.track > .meter { grid-area: wave; margin-bottom: 0; block-size: 2.25rem; }
+.track > .meter { grid-area: wave; block-size: 2.25rem; }
 .track > .readout { grid-area: time; }
 
 @media (min-width: 44rem) {
