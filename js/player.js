@@ -160,12 +160,24 @@
     return audio;
   };
 
+  /* Usually a filename in samples.json that doesn't match a file in /audio.
+     Say so plainly rather than leaving a dead button behind. */
   Player.prototype.fail = function () {
     this.stopFollowing();
     this.setState("paused");
     this.key.disabled = true;
     this.key.setAttribute("aria-label", "Sample unavailable");
+    this.meter.removeAttribute("tabindex");
+    this.meter.classList.remove("meter--live");
+
     var note = this.root.querySelector(".stage-note, .track-note");
+    if (!note) {
+      var host = this.root.querySelector(".stage, .track-head");
+      if (host) {
+        note = el("p", host.classList.contains("stage") ? "stage-note" : "track-note");
+        host.appendChild(note);
+      }
+    }
     if (note) note.textContent = "This sample could not be loaded.";
   };
 
