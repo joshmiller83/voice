@@ -5,3 +5,5 @@ josh2.jpg
 
 # Working notes — kept locally, not published on a public professional site.
 docs/
+__pycache__/
+*.pyc
